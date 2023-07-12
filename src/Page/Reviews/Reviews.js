@@ -29,7 +29,7 @@ const Reviews = () => {
         }
     ]
     return (
-        <div className='' style={{height:"1780px"}}>
+        <div className=''>
             {/* heding line */}
             <div className='flex mb-4 items-center'>
                 <h1 className='lg:text-4xl text-2xl font-bold'>Reviews ({datas.length}) </h1>

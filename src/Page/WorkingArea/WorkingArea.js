@@ -10,7 +10,7 @@ const WorkingArea = () => {
         navigate("/working-postcode");
     }
     return (
-        <div className='' style={{height:"1780px"}}>
+        <div className=''>
             {/* heding line */}
             <div className='flex items-center mb-4'>
                 <h1 className='lg:text-4xl text-2xl font-bold'>Working area</h1>

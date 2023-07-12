@@ -49,7 +49,7 @@ const WorkingPostCode = () => {
         }
     ]
     return (
-        <div className='' style={{height:"1780px"}}>
+        <div className=''>
             {/* heading line  */}
             <div className='flex items-center mb-4'>
                 <h1 className='lg:text-4xl text-2xl font-bold'>Trades</h1>

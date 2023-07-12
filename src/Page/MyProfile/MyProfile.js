@@ -55,7 +55,7 @@ const MyProfile = () => {
 
 
   return (
-    <div className="" style={{ height: "1780px" }}>
+    <div className="" >
       <div className="flex items-center mb-4">
         <h1 className="lg:text-4xl text-2xl font-bold">My Profile</h1>
         <p className="ml-12">
@@ -67,8 +67,7 @@ const MyProfile = () => {
             <div className='text-center '>
                 <img src={profile} alt=""  className=' mx-auto w-34'/>
                 <p className='lg:mx-12 mx-3 mt-2' style={{color:"#3F8825"}}>EDIT</p>
-            </div>
-                    
+            </div>    
         </div>
         {/* contact details input */}
         <div className="lg:mx-10 mx-3 border rounded-lg p-2 lg:p-10 mt-10 lg:w-[832px]">
