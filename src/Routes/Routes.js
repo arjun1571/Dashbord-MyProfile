@@ -4,6 +4,7 @@ import MyProfile from "../Page/MyProfile/MyProfile";
 import Trades from "../Page/Trades/Trades";
 import WorkingArea from "../Page/WorkingArea/WorkingArea";
 import Reviews from "../Page/Reviews/Reviews";
+import WorkingPostCode from "../Page/WorkingArea/WorkingPostCode";
 
 
 
@@ -31,7 +32,12 @@ export const routes =  createBrowserRouter([
             {
                 path:"/Reviews",
                 element: <Reviews></Reviews>
+            },
+            {
+                path:"/working-postcode",
+                element: <WorkingPostCode></WorkingPostCode>
             }
+            
         ]
     
     },

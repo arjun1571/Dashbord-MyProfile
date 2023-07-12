@@ -1,7 +1,14 @@
 import React from 'react';
 import profile from "../../asset/image/Ellipse 640.png"
+import editLogo from "../../asset/image/Vector (1).png"
+import { useNavigate } from "react-router-dom";
 
 const WorkingArea = () => {
+    const navigate = useNavigate();
+    const handleClick=()=> {
+        console.log("hello")
+        navigate("/working-postcode");
+    }
     return (
         <div className='' style={{height:"1780px"}}>
             <div className='flex mb-4'>
@@ -13,9 +20,16 @@ const WorkingArea = () => {
                     <img src={profile} alt=""  className=''/>
                     <p className='lg:mx-12 mx-3 mt-2' style={{color:"#3F8825"}}>EDIT</p>
                 </div>
-                <div className='lg:mx-10 mx-3 border rounded-lg p-2 lg:p-5 flex mt-10 lg:w-[832px]'>
-                    
-                    <h1>hello.......................... i am working area</h1>
+                <div className='lg:mx-10 mx-3 border rounded-lg p-2 justify-between lg:p-10 flex mt-10 lg:w-[832px]'>
+                    <div>
+                        <h1>Working area postcode</h1>
+                        <p>B3 2Nh</p>
+                    </div>
+                    <div>
+                        <button onClick={handleClick} className="border-2 border-lime-500 rounded-full p-2">
+                            <img src={editLogo} alt="" />
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
