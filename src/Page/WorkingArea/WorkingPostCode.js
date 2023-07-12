@@ -1,5 +1,6 @@
 import React from 'react';
 import profile from "../../asset/image/Ellipse 640.png"
+import mapLogo from "../../asset/image/Screenshot 2023-06-26 at 13.09 1.png"
 
 
 const WorkingPostCode = () => {
@@ -60,7 +61,7 @@ const WorkingPostCode = () => {
                     <h1 className='text-2xl font-bold'>Working area postcode </h1>
                     <input type="text" name="contact" autoComplete="off" placeholder='B3 2NH' className="pr-2 pl-3 mt-3 py-2 w-1/2 font-normal text-[#28534E] rounded-xl border-none ring-2 ring-[#E5EBE4] focus:outline-[#3F8825] focus:ring-2"/>
                     <p style={{color:"#3F8825"}} className='mt-2' >Enter address manually</p>
-                    <div className='grid grid-cols-4 gap-2 mt-8 '>
+                    <div className='grid grid-cols-2 md:grid-cols-4 gap-2 mt-8 '>
                         {
                             milesData?.map(data =>
                                 <div className=' bg-stone-200 rounded-lg'>
@@ -75,6 +76,16 @@ const WorkingPostCode = () => {
                              )
                         }      
                     </div>
+                    <img className='mt-7' src={mapLogo} alt="" />
+
+                    <div className="mt-3">
+                  <button className="py-2 px-4 my-1 mr-3 rounded-xl text-[#3F8825] bg-[#E6EBE3] hover:text-[#FFFFFF] hover:bg-[#3F8825] focus:bg-[#3F8825]  focus:text-[#FFFFFF]">
+                    Save
+                  </button>
+                  <button className="py-2 px-3 my-1 mr-3 rounded-xl text-[#3F8825] bg-[#E6EBE3] hover:text-[#FFFFFF] hover:bg-[#3F8825] focus:bg-[#3F8825]  focus:text-[#FFFFFF]">
+                    Cancel
+                  </button>
+                </div>
                 </div>
             </div>
         </div>
