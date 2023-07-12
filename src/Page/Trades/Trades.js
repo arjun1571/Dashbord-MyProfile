@@ -13,7 +13,7 @@ const Trades = () => {
                     <img src={profile} alt=""  className=''/>
                     <p className='lg:mx-12 mx-3 mt-2' style={{color:"#3F8825"}}>EDIT</p>
                 </div>
-                <div className='lg:mx-10 mx-3 border rounded-lg p-2 lg:p-5 flex mt-10 lg:w-[832px]'>
+                <div className='lg:mx-10 mx-3 border rounded-lg p-2 lg:p-10 flex mt-10 lg:w-[832px]'>
                     
                     <h1>hello.......................... i am trades</h1>
                 </div>

@@ -63,14 +63,15 @@ const MyProfile = () => {
         </p>
       </div>
       <div className="border rounded-lg p-5 lg:p-10 w-full h-full md:flex ">
-        <div className="mt-10">
-          <img src={profile} alt="" className="" />
-          <p className="lg:mx-12 mx-3 mt-2" style={{ color: "#3F8825" }}>
-            EDIT
-          </p>
+        <div className='mt-10'>
+            <div className='text-center '>
+                <img src={profile} alt=""  className=' mx-auto w-34'/>
+                <p className='lg:mx-12 mx-3 mt-2' style={{color:"#3F8825"}}>EDIT</p>
+            </div>
+                    
         </div>
         {/* contact details input */}
-        <div className="lg:mx-10 mx-3 border rounded-lg p-2 lg:p-5 mt-10 lg:w-[832px]">
+        <div className="lg:mx-10 mx-3 border rounded-lg p-2 lg:p-10 mt-10 lg:w-[832px]">
           {/* contact */}
           <div className="my-3">
             <h3 className="text-xl font-semibold">Contact Details</h3>
