@@ -3,6 +3,7 @@ import React from 'react';
 const ReviewsDetails = ({data}) => {
     const {name,service,date,rating,des}=data
     return (
+        // create reviews component 
         <div className='p-5'>
             <h1 className='text-2xl font-bold' style={{color:"#3F8825"}}>{service}</h1>
             <h3>{name}</h3>

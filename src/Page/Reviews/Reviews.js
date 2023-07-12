@@ -30,15 +30,19 @@ const Reviews = () => {
     ]
     return (
         <div className='' style={{height:"1780px"}}>
+            {/* heding line */}
             <div className='flex mb-4 items-center'>
                 <h1 className='lg:text-4xl text-2xl font-bold'>Reviews ({datas.length}) </h1>
                 <p className='mx-5'><small>Member since 2023</small></p>
             </div>
+            {/* main content  */}
             <div className='border rounded-lg p-5 lg:p-10 w-full h-full flex '>
+                {/* left side profile section */}
                 <div className='mt-10'>
                     <img src={profile} alt=""  className=''/>
                     <p className='lg:mx-12 mx-3 mt-2' style={{color:"#3F8825"}}>EDIT</p>
                 </div>
+                {/* create demo data and using map create on reviews section  */}
                 <div className='lg:mx-10 mx-3 border rounded-lg p-2 lg:p-5 mt-10 lg:w-[832px]'>
                     {
                         datas?.map((data)=> <ReviewsDetails key={data.id} data={data}></ReviewsDetails>)

@@ -5,6 +5,7 @@ import { SearchIcon } from "@heroicons/react/outline";
 
 
 const WorkingPostCode = () => {
+    // demo data 
     const milesData = [
         {
             id:'1',
@@ -49,17 +50,22 @@ const WorkingPostCode = () => {
     ]
     return (
         <div className='' style={{height:"1780px"}}>
+            {/* heading line  */}
             <div className='flex items-center mb-4'>
                 <h1 className='lg:text-4xl text-2xl font-bold'>Trades</h1>
                 <p className='mx-5'><small>Member since 2023</small></p>
             </div>
+            {/* main area  */}
             <div className='border rounded-lg p-5 lg:p-10 w-full h-full flex '>
+                {/* left side profile section */}
                 <div className='mt-10'>
                     <img src={profile} alt=""  className=''/>
                     <p className='lg:mx-12 mx-3 mt-2' style={{color:"#3F8825"}}>EDIT</p>
                 </div>
+                {/* working postcode section area  */}
                 <div className='lg:mx-10 mx-3 border rounded-lg p-2 lg:p-10 mt-10 lg:w-[832px]'>
                     <h1 className='text-2xl font-bold'>Working area postcode </h1>
+                    {/* search input  */}
                     <form action="" className="mx-auto w-full  mt-3">
                         <div className="relative flex items-center">
                         <SearchIcon className="w-5 h-6 text-[#081D03] absolute ml-3 pointer-events-none"></SearchIcon>
@@ -73,6 +79,7 @@ const WorkingPostCode = () => {
                         </div>
                     </form>
                     <p style={{color:"#3F8825"}} className='mt-2' >Enter address manually</p>
+                    {/* miles button dynamic data pass  and design using map  */}
                     <div className='grid grid-cols-2 md:grid-cols-4 gap-2 mt-8 '>
                         {
                             milesData?.map(data =>
@@ -88,7 +95,9 @@ const WorkingPostCode = () => {
                              )
                         }      
                     </div>
+                    {/* use map imag  */}
                     <img className='mt-7' src={mapLogo} alt="" />
+                    {/* button section  */}
                     <div className="mt-3">
                         <button className="py-2 px-4 my-1 mr-3 rounded-xl text-[#3F8825] bg-[#E6EBE3] hover:text-[#FFFFFF] hover:bg-[#3F8825] focus:bg-[#3F8825]  focus:text-[#FFFFFF]">
                             Save
