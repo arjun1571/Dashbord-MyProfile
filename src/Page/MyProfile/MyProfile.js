@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import profile from "../../asset/image/Ellipse 640.png";
 import editImage from "../../asset/image/Vector.png";
+import image1 from "../../asset/image/image1.png";
+import image2 from "../../asset/image/image2.png";
+import image3 from "../../asset/image/image3.png";
+import image4 from "../../asset/image/image4.png";
 
 const MyProfile = () => {
+
+    // fake data for display
   const contactDetails = {
     contact: "01875258984",
     name: "Kirk Smith",
@@ -55,7 +61,7 @@ const MyProfile = () => {
 
 
   return (
-    <div className="" >
+    <div className="" style={{ height: "1780px" }}>
       <div className="flex items-center mb-4">
         <h1 className="lg:text-4xl text-2xl font-bold">My Profile</h1>
         <p className="ml-12">
@@ -63,14 +69,15 @@ const MyProfile = () => {
         </p>
       </div>
       <div className="border rounded-lg p-5 lg:p-10 w-full h-full md:flex ">
-        <div className='mt-10'>
-            <div className='text-center '>
-                <img src={profile} alt=""  className=' mx-auto w-34'/>
-                <p className='lg:mx-12 mx-3 mt-2' style={{color:"#3F8825"}}>EDIT</p>
-            </div>    
-        </div>
+      <div className='mt-10'>
+                    <div className='text-center '>
+                        <img src={profile} alt=""  className=' mx-auto w-34'/>
+                        <p className='lg:mx-12 mx-3 mt-2' style={{color:"#3F8825"}}>EDIT</p>
+                    </div>
+                    
+                </div>
         {/* contact details input */}
-        <div className="lg:mx-10 mx-3 border rounded-lg p-2 lg:p-10 mt-10 lg:w-[832px]">
+        <div className="lg:mx-10 mx-3 border rounded-lg p-2 lg:p-5 mt-10 lg:w-[832px]">
           {/* contact */}
           <div className="my-3">
             <h3 className="text-xl font-semibold">Contact Details</h3>
@@ -227,6 +234,51 @@ const MyProfile = () => {
                   type="text"
                   name="name"
                   value={contactDetails.username}
+                  autoComplete="off"
+                  className="pr-2 pl-3 mt-3 py-2 w-[90%] font-normal text-[#28534E] rounded-xl border-none ring-2 ring-[#E5EBE4] focus:outline-[#3F8825] focus:ring-2"
+                />
+                <div className="mt-3">
+                  <button className="py-2 px-4 my-1 mr-3 rounded-xl text-[#3F8825] bg-[#E6EBE3] hover:text-[#FFFFFF] hover:bg-[#3F8825] focus:bg-[#3F8825]  focus:text-[#FFFFFF]">
+                    Save
+                  </button>
+                  <button className="py-2 px-3 my-1 mr-3 rounded-xl text-[#3F8825] bg-[#E6EBE3] hover:text-[#FFFFFF] hover:bg-[#3F8825] focus:bg-[#3F8825]  focus:text-[#FFFFFF]">
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+          {/* Photo Gallary */}
+          <div className="my-3">
+            <h3 className="text-xl font-semibold">Photo Gallary</h3>
+            {
+                !photoInput && (
+                    <p className="mb-3">4/21 Image added</p>
+                )
+            }
+            {!photoInput && (
+              <div className="flex">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 w-[85%] mr-3">
+                    <img src={image1} alt="" />
+                    <img src={image2} alt="" />
+                    <img src={image3} alt="" />
+                    <img src={image4} alt="" />
+                </div>
+                <div className=" w-[15%] text-right">
+                <button
+                  onClick={handlePhoto}
+                  className="border-2 rounded-full p-2"
+                >
+                  <img src={editImage} alt="" />
+                </button>
+                </div>
+              </div>
+            )}
+            {photoInput && (
+              <div>
+                <input
+                  type="file"
+                  name="photo"
                   autoComplete="off"
                   className="pr-2 pl-3 mt-3 py-2 w-[90%] font-normal text-[#28534E] rounded-xl border-none ring-2 ring-[#E5EBE4] focus:outline-[#3F8825] focus:ring-2"
                 />
