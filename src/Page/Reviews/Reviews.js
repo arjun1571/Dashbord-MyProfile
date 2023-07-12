@@ -4,7 +4,7 @@ const Reviews = () => {
     return (
         <div className='' style={{height:"1780px"}}>
             <div className='flex mb-4'>
-                <h1 className='lg:text-4xl text-2xl font-bold'>My Profile</h1>
+                <h1 className='lg:text-4xl text-2xl font-bold'>Reviews (3)</h1>
                 <p className='mx-3'><small>Member since 2023</small></p>
             </div>
             <div className='border rounded-lg p-5 lg:p-10 w-full h-full flex '>
