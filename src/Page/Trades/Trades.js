@@ -4,7 +4,6 @@ import img from "../../asset/image/plus (11) 59.png";
 import JobCategory from "../JobCategory/JobCategory";
 import editImage from "../../asset/image/Vector.png";
 
-
 const Trades = () => {
   const [tradeInput, setTradeInput] = useState(false);
 
@@ -136,15 +135,17 @@ const Trades = () => {
         </p>
       </div>
       <div className="border rounded-lg p-5 lg:p-10 w-full h-full md:flex ">
-      <div className='mt-10'>
-            <div className='text-center '>
-                <img src={profile} alt=""  className=' mx-auto w-34'/>
-                <p className='lg:mx-12 mx-3 mt-2' style={{color:"#3F8825"}}>EDIT</p>
-            </div>    
+        <div className="mt-10">
+          <div className="text-center ">
+            <img src={profile} alt="" className=" mx-auto w-34" />
+            <p className="lg:mx-12 mx-3 mt-2" style={{ color: "#3F8825" }}>
+              EDIT
+            </p>
+          </div>
         </div>
-        {/* contact details input */}
+        {/* trades details */}
         <div className="lg:mx-10 mx-3 border rounded-lg p-2 lg:p-5 mt-10 lg:w-[832px]">
-          {/* contact */}
+          {/* trades */}
           <div className="my-3">
             <h3 className="text-xl font-semibold">Trades</h3>
             {/* trades data */}
@@ -164,26 +165,28 @@ const Trades = () => {
             </div>
           </div>
           {/* trade items list to select */}
-          <div className="my-3">
-            <div>
-              <p className="text-[#616D57] text-xl mt-3 mb-8">
-                Select all the trades to suit your business.
-              </p>
-              <div className="flex flex-wrap sm:mt-3 lg:mt-0 mx-auto w-full">
-                {jobCategories.map((category, index) => (
-                  <JobCategory key={index} category={category}></JobCategory>
-                ))}
+          {tradeInput && (
+            <div className="my-3">
+              <div>
+                <p className="text-[#616D57] text-xl mt-3 mb-8">
+                  Select all the trades to suit your business.
+                </p>
+                <div className="flex flex-wrap sm:mt-3 lg:mt-0 mx-auto w-full">
+                  {jobCategories.map((category, index) => (
+                    <JobCategory key={index} category={category}></JobCategory>
+                  ))}
+                </div>
+              </div>
+              <div className="mt-3">
+                <button className="py-2 px-4 my-1 mr-3 rounded-xl text-[#3F8825] bg-[#E6EBE3] hover:text-[#FFFFFF] hover:bg-[#3F8825] focus:bg-[#3F8825]  focus:text-[#FFFFFF]">
+                  Save
+                </button>
+                <button className="py-2 px-3 my-1 mr-3 rounded-xl text-[#3F8825] bg-[#E6EBE3] hover:text-[#FFFFFF] hover:bg-[#3F8825] focus:bg-[#3F8825]  focus:text-[#FFFFFF]">
+                  Cancel
+                </button>
               </div>
             </div>
-            <div className="mt-3">
-                  <button className="py-2 px-4 my-1 mr-3 rounded-xl text-[#3F8825] bg-[#E6EBE3] hover:text-[#FFFFFF] hover:bg-[#3F8825] focus:bg-[#3F8825]  focus:text-[#FFFFFF]">
-                    Save
-                  </button>
-                  <button className="py-2 px-3 my-1 mr-3 rounded-xl text-[#3F8825] bg-[#E6EBE3] hover:text-[#FFFFFF] hover:bg-[#3F8825] focus:bg-[#3F8825]  focus:text-[#FFFFFF]">
-                    Cancel
-                  </button>
-                </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
