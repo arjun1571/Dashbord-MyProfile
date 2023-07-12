@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import profile from "../../asset/image/Ellipse 640.png";
 import editImage from "../../asset/image/Vector.png";
 import image1 from "../../asset/image/image1.png";
-import image2 from "../../asset/image/image2.png";
-import image3 from "../../asset/image/image3.png";
-import image4 from "../../asset/image/image4.png";
+
 
 const MyProfile = () => {
 
@@ -61,7 +59,7 @@ const MyProfile = () => {
 
 
   return (
-    <div className="" style={{ height: "1780px" }}>
+    <div className="" >
       <div className="flex items-center mb-4">
         <h1 className="lg:text-4xl text-2xl font-bold">My Profile</h1>
         <p className="ml-12">
@@ -260,9 +258,9 @@ const MyProfile = () => {
               <div className="flex">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 w-[85%] mr-3">
                     <img src={image1} alt="" />
-                    <img src={image2} alt="" />
-                    <img src={image3} alt="" />
-                    <img src={image4} alt="" />
+                    <img src={image1} alt="" />
+                    <img src={image1} alt="" />
+                    <img src={image1} alt="" />
                 </div>
                 <div className=" w-[15%] text-right">
                 <button
